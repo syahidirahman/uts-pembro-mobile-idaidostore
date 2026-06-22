@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="idaido_primary">#A294F9</color>
+    <color name="idaido_secondary">#CDC1FF</color>
+    <color name="idaido_bg">#F4F6F9</color>
+    <color name="idaido_text_title">#8A78F0</color>
+    <color name="idaido_text_subtitle">#B3A6F5</color>
 </resources>
