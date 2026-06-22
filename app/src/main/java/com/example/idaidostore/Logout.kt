@@ -13,8 +13,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Logout : AppCompatActivity() {
 
-    private var usernameBenar: String = ""
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -28,6 +26,21 @@ class Logout : AppCompatActivity() {
             insets
         }
 
-        usernameBenar = intent.getStringExtra(us)
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
+
+        bottomNav.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.menu_home -> {
+                    true
+                }
+                R.id.menu_about -> {
+                    true
+                }
+                R.id.menu_logout -> {
+                    false
+                }
+                else -> false
+            }
+        }
     }
 }
