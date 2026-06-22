@@ -27,13 +27,7 @@
             android:name=".MainActivity"
             android:exported="true">
 
-            <!-- <intent-filter> -->
-            <!-- &lt;!&ndash;                <action android:name="android.intent.action.MAIN" />&ndash;&gt; -->
-
-
-            <!-- &lt;!&ndash;                <category android:name="android.intent.category.LAUNCHER" />&ndash;&gt; -->
-            <!-- </intent-filter> -->
         </activity>
+        <activity android:name=".activity.DashboardActivity" android:exported="false" />
     </application>
-
 </manifest>
