@@ -13,6 +13,7 @@ import com.example.idaidostore.LoginActivity
 import com.example.idaidostore.R
 import com.example.idaidostore.adapter.ProductAdapter
 import com.example.idaidostore.model.Product
+import androidx.appcompat.app.AlertDialog
 
 class DashboardActivity : AppCompatActivity() {
 
@@ -60,9 +61,18 @@ class DashboardActivity : AppCompatActivity() {
             startActivity(intent)
         }
         btnKeluar.setOnClickListener {
-            val intent = Intent(this@DashboardActivity, LoginActivity::class.java)
-            startActivity(intent)
-            finish() // finish() digunakan agar setelah logout, user tidak bisa menekan tombol "Back" ke dashboard lagi
+            AlertDialog.Builder(this)
+                .setTitle("Konfirmasi Logout")
+                .setMessage("Apakah Anda yakin ingin keluar?")
+                .setPositiveButton("Ya") { _, _ ->
+
+                    val intent = Intent(this@DashboardActivity, LoginActivity::class.java)
+                    startActivity(intent)
+                    finish() // finish() digunakan agar setelah logout, user tidak bisa menekan tombol "Back" ke dashboard lagi
+
+                }
+                .setNegativeButton("Batal", null)
+                .show()
         }
     }
 
