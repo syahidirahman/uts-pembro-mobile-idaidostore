@@ -1,11 +1,14 @@
 package com.example.idaidostore.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.idaidostore.About
 import com.example.idaidostore.R
 import com.example.idaidostore.adapter.ProductAdapter
 import com.example.idaidostore.model.Product
@@ -43,12 +46,17 @@ class DashboardActivity : AppCompatActivity() {
         val btnFashion: Button = findViewById(R.id.btnFashion)
         val btnElektronik: Button = findViewById(R.id.btnElektronik)
         val btnMakanan: Button = findViewById(R.id.btnMakanan)
+        val btnTentang = findViewById<LinearLayout>(R.id.btnTentang)
 
         btnSemua.setOnClickListener { filterKategori("Semua", btnSemua) }
         btnGame.setOnClickListener { filterKategori("Game", btnGame) }
         btnFashion.setOnClickListener { filterKategori("Fashion", btnFashion) }
         btnElektronik.setOnClickListener { filterKategori("Elektronik", btnElektronik) }
         btnMakanan.setOnClickListener { filterKategori("Makanan", btnMakanan) }
+        btnTentang.setOnClickListener {
+            val intent = Intent(this@DashboardActivity, About::class.java)
+            startActivity(intent)
+        }
     }
 
     // FUNGSI UNTUK FILTER DATA

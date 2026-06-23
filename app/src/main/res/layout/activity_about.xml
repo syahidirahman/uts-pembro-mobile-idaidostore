@@ -207,7 +207,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
-                android:text="RIDHO DRAJAT C0303104"
+                android:text="RIDHO DRAJAT C030324104"
                 android:textColor="@color/ungu1"
                 android:textSize="12sp" />
 
