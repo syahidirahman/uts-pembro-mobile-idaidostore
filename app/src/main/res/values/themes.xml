@@ -2,8 +2,17 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.IDAIDOSTORE" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Mengaktifkan animasi transisi custom -->
+        <item name="android:windowAnimationStyle">@style/WindowTransitions</item>
     </style>
 
     <style name="Theme.IDAIDOSTORE" parent="Base.Theme.IDAIDOSTORE" />
+
+    <!-- Style untuk transisi smooth fade in/out -->
+    <style name="WindowTransitions" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@android:anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@android:anim/fade_out</item>
+    </style>
 </resources>

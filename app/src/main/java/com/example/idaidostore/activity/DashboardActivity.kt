@@ -56,20 +56,23 @@ class DashboardActivity : AppCompatActivity() {
         btnFashion.setOnClickListener { filterKategori("Fashion", btnFashion) }
         btnElektronik.setOnClickListener { filterKategori("Elektronik", btnElektronik) }
         btnMakanan.setOnClickListener { filterKategori("Makanan", btnMakanan) }
+
         btnTentang.setOnClickListener {
             val intent = Intent(this@DashboardActivity, About::class.java)
             startActivity(intent)
         }
+
         btnKeluar.setOnClickListener {
             AlertDialog.Builder(this)
                 .setTitle("Konfirmasi Logout")
                 .setMessage("Apakah Anda yakin ingin keluar?")
                 .setPositiveButton("Ya") { _, _ ->
-
                     val intent = Intent(this@DashboardActivity, LoginActivity::class.java)
-                    startActivity(intent)
-                    finish() // finish() digunakan agar setelah logout, user tidak bisa menekan tombol "Back" ke dashboard lagi
 
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
+
+                    finishAffinity()
                 }
                 .setNegativeButton("Batal", null)
                 .show()
@@ -86,7 +89,6 @@ class DashboardActivity : AppCompatActivity() {
             adapter.updateData(filteredList)
         }
 
-        // Logika Mengubah Warna Tombol
         val allButtons = listOf(
             findViewById<Button>(R.id.btnSemua),
             findViewById<Button>(R.id.btnGame),
