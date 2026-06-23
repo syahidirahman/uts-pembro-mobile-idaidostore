@@ -9,6 +9,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.idaidostore.About
+import com.example.idaidostore.LoginActivity
 import com.example.idaidostore.R
 import com.example.idaidostore.adapter.ProductAdapter
 import com.example.idaidostore.model.Product
@@ -47,6 +48,7 @@ class DashboardActivity : AppCompatActivity() {
         val btnElektronik: Button = findViewById(R.id.btnElektronik)
         val btnMakanan: Button = findViewById(R.id.btnMakanan)
         val btnTentang = findViewById<LinearLayout>(R.id.btnTentang)
+        val btnKeluar = findViewById<LinearLayout>(R.id.btnKeluar)
 
         btnSemua.setOnClickListener { filterKategori("Semua", btnSemua) }
         btnGame.setOnClickListener { filterKategori("Game", btnGame) }
@@ -56,6 +58,11 @@ class DashboardActivity : AppCompatActivity() {
         btnTentang.setOnClickListener {
             val intent = Intent(this@DashboardActivity, About::class.java)
             startActivity(intent)
+        }
+        btnKeluar.setOnClickListener {
+            val intent = Intent(this@DashboardActivity, LoginActivity::class.java)
+            startActivity(intent)
+            finish() // finish() digunakan agar setelah logout, user tidak bisa menekan tombol "Back" ke dashboard lagi
         }
     }
 
