@@ -27,9 +27,13 @@ Berikut adalah rincian kontribusi masing-masing anggota dalam pengembangan aplik
 | **Syahidi Rahman** | C030324109 | Splash Screen & Git Manager. |
 | **Muhammad Ahyat** | C030324130 | Halaman Login. |
 
+## 🎥 Video Presentasi & Demo Aplikasi
+Untuk melihat bagaimana aplikasi ini berjalan beserta penjelasan teknis terkait *source code* yang digunakan, silakan saksikan melalui tautan YouTube berikut:
+* 🎥 **Link Video Youtube:** 👉 **https://youtu.be/K4dvWDcvGiM?si=BJUEbuGynu_xU-iE**
+
 ## 🎨 Desain UI/UX
 Anda dapat melihat *mockup* desain UI/UX aplikasi kami melalui tautan berikut:
-👉 **(https://www.figma.com/design/MSUK0rJStNO2fkNv2f0kC6/PBL?node-id=2047-2&t=H5GpjP1x0znzs00M-1)**
+👉 **https://www.figma.com/design/MSUK0rJStNO2fkNv2f0kC6/PBL?node-id=2047-2&t=H5GpjP1x0znzs00M-1**
 
 ## ©️ Atribusi & Hak Cipta
 * Seluruh ikon yang digunakan pada antarmuka aplikasi ini (*Home, Info, Logout,* dll.) diambil dari **[Google Fonts - Material Icons](https://fonts.google.com/icons)**.
