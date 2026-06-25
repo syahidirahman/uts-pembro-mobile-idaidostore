@@ -24,7 +24,7 @@ Berikut adalah rincian kontribusi masing-masing anggota dalam pengembangan aplik
 | :--- | :--- | :--- |
 | **Hilyatul Aulia** | C030324020 | Design UI/UX, Halaman Tentang, Logout, Editing Video. |
 | **Ridho Drajat** | C030324104 | Halaman Beranda (termasuk logika *filter* kategori, konfigurasi *Intent* navigasi, implementasi transisi *smooth*, serta optimasi UI `fitsSystemWindows`). |
-| **Syahidi Rahman** | C030324109 | Membuat page Splash Screen, serta mengelola seluruh proses *Git*.
+| **Syahidi Rahman** | C030324109 | Membuat page Splash Screen, serta mengelola seluruh proses *Git* sebagai Git Manager.
 | **Muhammad Ahyat** | C030324130 | Halaman Login. |
 
 ## 🎥 Video Presentasi & Demo Aplikasi
